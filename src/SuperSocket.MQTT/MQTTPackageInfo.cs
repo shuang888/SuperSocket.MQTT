@@ -1,3 +1,5 @@
+using SuperSocket.ProtoBase;
+
 namespace SuperSocket.MQTT
 {
     public class MQTTPackageInfo : IPackageInfo

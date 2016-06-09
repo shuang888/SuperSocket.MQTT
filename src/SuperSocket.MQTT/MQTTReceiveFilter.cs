@@ -3,8 +3,14 @@ using SuperSocket.ProtoBase;
 
 namespace SuperSocket.MQTT
 {
-    public class MQTTPackageInfo : FixedHeaderReceiveFilter<MQTTPackageInfo>
+    public class MQTTReceiveFilter : FixedHeaderReceiveFilter<MQTTPackageInfo>
     {
+        public MQTTReceiveFilter(int headerSize)
+            : base(2)
+        {
+            
+        }
+
         public override MQTTPackageInfo ResolvePackage(IBufferStream bufferStream)
         {
             throw new NotImplementedException();
