@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": false
+  },
+  "frameworks": {
+      "netstandard1.1": {
+        "dependencies": {
+          "SuperSocket.ProtoBase": "1.7.0-beta6"
+        }
+      }
+  }
+}
