@@ -2,7 +2,7 @@ using SuperSocket.ProtoBase;
 
 namespace SuperSocket.MQTT
 {
-    public class MQTTPackageInfo : IPackageInfo
+    public class MQTTPackage
     {
         public ControlPacketType Type { get; set; }
 
