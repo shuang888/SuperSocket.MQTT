@@ -14,6 +14,14 @@ namespace SuperSocket.MQTT.Packets
 
         public string ClientId { get; private set; }
 
+        public string WillTopic { get; private set; }
+
+        public string WillMessage { get; private set; }
+
+        public string UserName { get; private set; }
+
+        public string Password { get; private set; }
+
         internal protected override void DecodeBody(ref SequenceReader<byte> reader, object context)
         {
             reader.TryReadBigEndian(out short protocolNameLen);
@@ -27,6 +35,26 @@ namespace SuperSocket.MQTT.Packets
 
             reader.TryReadBigEndian(out short keepAlive);
             KeepAlive = keepAlive;
+
+            ClientId = reader.ReadLengthEncodedString();
+
+            var connectFlags = (ConnectFlags)Flags;
+
+            if ((connectFlags & ConnectFlags.WillFlag) == ConnectFlags.WillFlag)
+            {
+                WillTopic = reader.ReadLengthEncodedString();
+                WillMessage = reader.ReadLengthEncodedString();
+            }
+
+            if ((connectFlags & ConnectFlags.UserNameFlag) == ConnectFlags.UserNameFlag)
+            {
+                UserName = reader.ReadLengthEncodedString();
+            }
+
+            if ((connectFlags & ConnectFlags.PasswordFlag) == ConnectFlags.PasswordFlag)
+            {
+                Password = reader.ReadLengthEncodedString();
+            }
         }
     }
 }
