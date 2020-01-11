@@ -1,4 +1,5 @@
 using System.Buffers;
+using System.IO.Pipelines;
 using System.Text;
 using SuperSocket.ProtoBase;
 
@@ -21,6 +22,11 @@ namespace SuperSocket.MQTT.Packets
         public string UserName { get; private set; }
 
         public string Password { get; private set; }
+
+        public override int EncodeBody(PipeWriter writer)
+        {
+            throw new System.NotImplementedException();
+        }
 
         internal protected override void DecodeBody(ref SequenceReader<byte> reader, object context)
         {
