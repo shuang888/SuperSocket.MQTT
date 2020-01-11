@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{44759F26-AD7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSocket.MQTT", "src\SuperSocket.MQTT\SuperSocket.MQTT.csproj", "{549EA105-D941-4923-85B8-FA777444A1A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSocket.MQTT.Server", "src\SuperSocket.MQTT.Server\SuperSocket.MQTT.Server.csproj", "{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +34,21 @@ Global
 		{549EA105-D941-4923-85B8-FA777444A1A9}.Release|x64.Build.0 = Release|Any CPU
 		{549EA105-D941-4923-85B8-FA777444A1A9}.Release|x86.ActiveCfg = Release|Any CPU
 		{549EA105-D941-4923-85B8-FA777444A1A9}.Release|x86.Build.0 = Release|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Debug|x64.Build.0 = Debug|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Debug|x86.Build.0 = Debug|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Release|x64.ActiveCfg = Release|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Release|x64.Build.0 = Release|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Release|x86.ActiveCfg = Release|Any CPU
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{549EA105-D941-4923-85B8-FA777444A1A9} = {44759F26-AD7B-4D06-BBCF-C70D5AB2C4BE}
+		{B28F3060-D93F-4ED4-A24C-B9C1D4C7ED09} = {44759F26-AD7B-4D06-BBCF-C70D5AB2C4BE}
 	EndGlobalSection
 EndGlobal
