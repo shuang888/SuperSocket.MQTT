@@ -7,13 +7,10 @@ using System.Threading.Tasks;
 
 namespace SuperSocket.MQTT.Packets
 {
-    public class CONNECT : IAsyncCommand<ControlPacketType, MQTTPacket>
+    [Command(Key = ControlPacketType.CONNECT)]
+    public class CONNECT : IAsyncCommand<MQTTPacket>
     {
-        public ControlPacketType Key => throw new System.NotImplementedException();
-
-        public string Name => throw new System.NotImplementedException();
-
-        public Task ExecuteAsync(IAppSession session, MQTTPacket package)
+        public ValueTask ExecuteAsync(IAppSession session, MQTTPacket package)
         {
             throw new System.NotImplementedException();
         }
