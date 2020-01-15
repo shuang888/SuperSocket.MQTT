@@ -1,12 +1,11 @@
 using System.Buffers;
-using System.IO.Pipelines;
 using SuperSocket.ProtoBase;
 
 namespace SuperSocket.MQTT.Packets
 {
     public class ConnAckPacket : MQTTPacket
     {
-        public override int EncodeBody(PipeWriter writer)
+        public override int EncodeBody(IBufferWriter<byte> writer)
         {
             throw new System.NotImplementedException();
         }

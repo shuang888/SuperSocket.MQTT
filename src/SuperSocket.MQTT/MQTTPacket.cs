@@ -1,5 +1,4 @@
 using System.Buffers;
-using System.IO.Pipelines;
 using SuperSocket.ProtoBase;
 
 namespace SuperSocket.MQTT
@@ -14,6 +13,6 @@ namespace SuperSocket.MQTT
 
         internal protected abstract void DecodeBody(ref SequenceReader<byte> reader, object context);
 
-        public abstract int EncodeBody(PipeWriter writer);
+        public abstract int EncodeBody(IBufferWriter<byte> writer);
     }
 }
